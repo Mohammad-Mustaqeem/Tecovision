@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { X, ArrowUpRight, ExternalLink } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { X } from 'lucide-react';
 import Reveal from '../components/Reveal';
 
 const U = (id) => `https://images.unsplash.com/${id}?w=640&h=400&fit=crop&auto=format`;
@@ -201,17 +201,6 @@ function ProjectCard({ project, onClick }) {
           )}
         </div>
 
-        {/* Actions */}
-        <div className="flex items-center justify-between mt-auto">
-          <div className="flex items-center gap-1.5 text-deep-black group-hover:text-signal-red transition-colors duration-300">
-            <span className="font-inter text-label-md uppercase tracking-widest">View Details</span>
-            <ArrowUpRight size={13} />
-          </div>
-          <div className="flex items-center gap-1 text-zinc-muted">
-            <span className="font-inter text-label-sm uppercase tracking-widest">Live Demo</span>
-            <ExternalLink size={11} />
-          </div>
-        </div>
       </div>
     </article>
   );
