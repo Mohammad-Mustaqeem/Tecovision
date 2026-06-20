@@ -61,7 +61,16 @@ export default function Home() {
     <>
       <SEO
         path="/"
-        description="Tecovision is a software agency in India building precision web apps, mobile apps, and AI systems. Your vision, our technology, shared success."
+        description="Tecovision is a software development company in Vijayapura, Karnataka, India. We build web applications, mobile apps, and AI systems for businesses worldwide. Get a free consultation."
+        keywords={['software development company Vijayapura', 'web development Karnataka', 'IT company Vijayapura', 'software agency India', 'website development company India']}
+        faq={[
+          { q: 'What services does Tecovision offer?', a: 'Tecovision offers web development, mobile app development, AI integration and automation, UI/UX design, enterprise software, and technical consulting.' },
+          { q: 'Where is Tecovision located?', a: 'Tecovision is located in Vijayapura, Karnataka, India. We work with clients across India and worldwide.' },
+          { q: 'How much does a website cost in India?', a: 'Website development costs vary based on requirements. Contact Tecovision for a free consultation and custom quote tailored to your project.' },
+          { q: 'Does Tecovision build mobile apps?', a: 'Yes, Tecovision builds cross-platform mobile applications for iOS and Android using React Native.' },
+          { q: 'How long does it take to build a website?', a: 'A standard business website takes 2–4 weeks. Complex web applications can take 6–12 weeks depending on scope and features.' },
+          { q: 'Does Tecovision offer AI development services?', a: 'Yes, Tecovision offers AI integration, automation pipelines, chatbots, and Retrieval-Augmented Generation (RAG) systems for businesses.' },
+        ]}
       />
     <div>
       {/* ─── Hero ──────────────────────────────────────────────────────────── */}

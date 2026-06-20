@@ -30,9 +30,11 @@ export default function About() {
   return (
     <>
       <SEO
-        title="About Us"
-        description="Tecovision was founded on April 6, 2026 in Vijayapura, Karnataka. We are an engineering-first software agency committed to precision, transparency, and long-term quality."
+        title="About Tecovision"
+        description="Tecovision is a software development company founded in Vijayapura, Karnataka, India. Built on precision engineering, transparency, and long-term client success."
         path="/about"
+        keywords={['about Tecovision', 'software company Vijayapura Karnataka', 'IT company Vijayapura', 'Tecovision team', 'software development company Karnataka India']}
+        breadcrumbs={[{ name: 'About', path: '/about' }]}
       />
     <div className="pb-24">
       {/* Header */}

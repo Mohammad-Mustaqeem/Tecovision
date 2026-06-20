@@ -17,9 +17,11 @@ export default function Contact() {
   return (
     <>
       <SEO
-        title="Contact"
-        description="Start a project with Tecovision. We respond within 24 hours. Based in Vijayapura, Karnataka, India — building software for clients worldwide."
+        title="Contact Us — Start a Project"
+        description="Contact Tecovision to start your software project. We respond within 24 hours. Based in Vijayapura, Karnataka, India. Web development, mobile apps, AI — let's build together."
         path="/contact"
+        keywords={['contact Tecovision', 'hire software developer India', 'web development company contact', 'software project inquiry India', 'get website built India']}
+        breadcrumbs={[{ name: 'Contact', path: '/contact' }]}
       />
     <div className="pb-24">
       {/* Header */}

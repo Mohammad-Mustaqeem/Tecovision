@@ -27,13 +27,24 @@
       "@context": "https://schema.org",
       "@graph": [
         {
-          "@type": "Organization",
-          "@id": "https://tecovision.com/#organization",
+          "@type": ["Organization", "LocalBusiness", "ProfessionalService"],
+          "@id": "https://www.tecovision.com/#organization",
           "name": "Tecovision",
-          "url": "https://tecovision.com",
-          "logo": "https://tecovision.com/favicon.svg",
+          "alternateName": "Tecovision Software",
+          "description": "Tecovision is a software development company in Vijayapura, Karnataka, India, specialising in web development, mobile apps, AI automation, and enterprise software.",
+          "url": "https://www.tecovision.com",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.tecovision.com/favicon.svg"
+          },
+          "image": "https://www.tecovision.com/favicon.svg",
           "email": "tecovision.com@gmail.com",
-          "telephone": "+918951085909",
+          "telephone": "+91-89510-85909",
+          "foundingDate": "2026-04-06",
+          "priceRange": "₹₹",
+          "currenciesAccepted": "INR",
+          "paymentAccepted": "Bank Transfer, UPI",
+          "areaServed": ["India", "Worldwide"],
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "B.M. Nagthan Building, Badi Kaman",
@@ -42,17 +53,50 @@
             "postalCode": "586101",
             "addressCountry": "IN"
           },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 16.8302,
+            "longitude": 75.7100
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Software Development Services",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web Development", "description": "Custom web applications built with React, Node.js, and modern frameworks." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Mobile App Development", "description": "Cross-platform mobile apps for iOS and Android using React Native." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "AI Integration & Automation", "description": "AI-powered systems, chatbots, RAG pipelines, and workflow automation." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "UI/UX Design", "description": "User interface and user experience design for web and mobile products." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Enterprise Software", "description": "Scalable enterprise applications, ERP systems, and internal tools." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Technical Consulting", "description": "Architecture reviews, technology strategy, and digital transformation consulting." } }
+            ]
+          },
           "sameAs": [
             "https://www.instagram.com/tecovision/",
-            "https://www.linkedin.com/company/tecovision/"
-          ]
+            "https://www.linkedin.com/company/tecovision/",
+            "https://github.com/Mohammad-Mustaqeem"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91-89510-85909",
+            "contactType": "customer service",
+            "email": "tecovision.com@gmail.com",
+            "availableLanguage": ["English", "Hindi", "Kannada"],
+            "areaServed": "Worldwide"
+          }
         },
         {
           "@type": "WebSite",
-          "@id": "https://tecovision.com/#website",
-          "url": "https://tecovision.com",
+          "@id": "https://www.tecovision.com/#website",
+          "url": "https://www.tecovision.com",
           "name": "Tecovision",
-          "publisher": { "@id": "https://tecovision.com/#organization" }
+          "description": "Software development company in Vijayapura, Karnataka, India.",
+          "publisher": { "@id": "https://www.tecovision.com/#organization" },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "https://www.tecovision.com/blog?q={search_term_string}",
+            "query-input": "required name=search_term_string"
+          },
+          "inLanguage": "en-IN"
         }
       ]
     }

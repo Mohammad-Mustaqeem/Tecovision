@@ -18,9 +18,11 @@ export default function Blog() {
   return (
     <>
       <SEO
-        title="Engineering Blog"
-        description="Sharp takes and deep dives from the Tecovision engineering team on AI, web development, full stack, and cloud infrastructure."
+        title="Blog — AI, Web Dev & Software Insights"
+        description="The Tecovision engineering blog — expert articles on AI automation, web development, full stack, cloud infrastructure, and software industry trends in India."
         path="/blog"
+        keywords={['software development blog India', 'AI development articles', 'web development tips India', 'technology blog Karnataka', 'Tecovision blog']}
+        breadcrumbs={[{ name: 'Blog', path: '/blog' }]}
       />
 
       <div className="pb-24">

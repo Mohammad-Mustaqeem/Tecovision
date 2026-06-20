@@ -38,9 +38,11 @@ export default function Portfolio() {
   return (
     <>
       <SEO
-        title="Portfolio"
-        description="Real websites built by Tecovision — dental clinic, real estate, IVF clinic. See our work and the quality we deliver for clients."
+        title="Portfolio — Our Work"
+        description="Real websites built by Tecovision — healthcare, dental clinic, real estate platforms. View our portfolio of web development projects delivered for clients in India."
         path="/portfolio"
+        keywords={['web development portfolio India', 'website design portfolio Karnataka', 'software projects India', 'Tecovision projects', 'website development examples India']}
+        breadcrumbs={[{ name: 'Portfolio', path: '/portfolio' }]}
       />
     <div className="pb-24">
       {/* Header */}

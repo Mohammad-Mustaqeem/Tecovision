@@ -37,6 +37,8 @@ export default function BlogPost() {
         path={`/blog/${post.slug}`}
         type="article"
         article={post}
+        keywords={[post.tag, 'Tecovision blog', 'software development India', 'technology insights']}
+        breadcrumbs={[{ name: 'Blog', path: '/blog' }, { name: post.tag, path: `/blog/${post.slug}` }]}
       />
 
       <div className="pb-24">

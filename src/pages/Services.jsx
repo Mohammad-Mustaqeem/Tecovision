@@ -71,9 +71,19 @@ export default function Services() {
   return (
     <>
       <SEO
-        title="Services"
-        description="Tecovision builds web applications, mobile apps, AI automation systems, and enterprise software. Precision engineering for businesses that demand quality."
+        title="Software Development Services"
+        description="Web development, mobile apps, AI automation, UI/UX design, and enterprise software — Tecovision delivers precision-engineered digital solutions from Vijayapura, India."
         path="/services"
+        keywords={['web development services India', 'mobile app development India', 'AI automation services', 'enterprise software development', 'UI UX design India', 'software development services Karnataka']}
+        breadcrumbs={[{ name: 'Services', path: '/services' }]}
+        serviceList={[
+          { name: 'Web Development', desc: 'Custom web applications and websites built with React, Node.js, and modern frameworks for businesses of all sizes.' },
+          { name: 'Mobile App Development', desc: 'Cross-platform mobile applications for iOS and Android using React Native with seamless user experiences.' },
+          { name: 'AI Integration & Automation', desc: 'AI-powered chatbots, RAG pipelines, and workflow automation systems that save time and increase efficiency.' },
+          { name: 'UI/UX Design', desc: 'User interface and experience design that converts visitors into customers through clear, purposeful interfaces.' },
+          { name: 'Enterprise Software', desc: 'Scalable enterprise applications, ERP systems, and internal tools that replace manual workflows.' },
+          { name: 'Technical Consulting', desc: 'Architecture reviews, technology strategy, and digital transformation consulting for growing businesses.' },
+        ]}
       />
     <div className="pb-24">
       {/* Header */}
