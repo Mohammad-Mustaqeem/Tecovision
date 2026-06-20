@@ -1,5 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 import Reveal from '../components/Reveal';
+import SEO from '../components/SEO';
 
 const U = (id) => `https://images.unsplash.com/${id}?w=640&h=400&fit=crop&auto=format`;
 
@@ -68,6 +69,12 @@ const services = [
 
 export default function Services() {
   return (
+    <>
+      <SEO
+        title="Services"
+        description="Tecovision builds web applications, mobile apps, AI automation systems, and enterprise software. Precision engineering for businesses that demand quality."
+        path="/services"
+      />
     <div className="pb-24">
       {/* Header */}
       <section className="px-5 md:px-16 max-w-container mx-auto pt-14 pb-16 border-b border-zinc-muted/20">
@@ -134,5 +141,6 @@ export default function Services() {
       </section>
 
     </div>
+    </>
   );
 }

@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { ArrowRight, Layers, Brain, Zap, HeadphonesIcon, GitBranch, BadgeDollarSign, Star, Quote, Building2, HeartPulse, Smile, Heart, GraduationCap, UtensilsCrossed, Rocket, Store, Globe, Award, Building } from 'lucide-react';
 import ParticleCanvas from '../components/ParticleCanvas';
 import Reveal from '../components/Reveal';
@@ -57,6 +58,11 @@ export default function Home() {
   };
 
   return (
+    <>
+      <SEO
+        path="/"
+        description="Tecovision is a software agency in India building precision web apps, mobile apps, and AI systems. Your vision, our technology, shared success."
+      />
     <div>
       {/* ─── Hero ──────────────────────────────────────────────────────────── */}
       <section
@@ -263,5 +269,6 @@ export default function Home() {
         </Reveal>
       </section>
     </div>
+    </>
   );
 }

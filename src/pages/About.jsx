@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import { ArrowRight } from 'lucide-react';
 import Reveal from '../components/Reveal';
 
@@ -27,6 +28,12 @@ const team = [
 
 export default function About() {
   return (
+    <>
+      <SEO
+        title="About Us"
+        description="Tecovision was founded on April 6, 2026 in Vijayapura, Karnataka. We are an engineering-first software agency committed to precision, transparency, and long-term quality."
+        path="/about"
+      />
     <div className="pb-24">
       {/* Header */}
       <section className="px-5 md:px-16 max-w-container mx-auto pt-14 pb-16 border-b border-zinc-muted/20">
@@ -183,5 +190,6 @@ export default function About() {
         </Reveal>
       </div>
     </div>
+    </>
   );
 }

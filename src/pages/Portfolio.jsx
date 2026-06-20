@@ -1,4 +1,5 @@
 import { ExternalLink } from 'lucide-react';
+import SEO from '../components/SEO';
 import Reveal from '../components/Reveal';
 
 const U = (id) => `https://images.unsplash.com/${id}?w=640&h=400&fit=crop&auto=format`;
@@ -35,6 +36,12 @@ const projects = [
 
 export default function Portfolio() {
   return (
+    <>
+      <SEO
+        title="Portfolio"
+        description="Real websites built by Tecovision — dental clinic, real estate, IVF clinic. See our work and the quality we deliver for clients."
+        path="/portfolio"
+      />
     <div className="pb-24">
       {/* Header */}
       <section className="px-5 md:px-16 max-w-container mx-auto pt-14 pb-12 border-b border-zinc-muted/20">
@@ -107,5 +114,6 @@ export default function Portfolio() {
         </div>
       </section>
     </div>
+    </>
   );
 }

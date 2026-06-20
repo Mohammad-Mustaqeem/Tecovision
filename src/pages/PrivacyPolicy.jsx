@@ -1,4 +1,5 @@
 import Reveal from '../components/Reveal';
+import SEO from '../components/SEO';
 
 const sections = [
   {
@@ -33,6 +34,8 @@ const sections = [
 
 export default function PrivacyPolicy() {
   return (
+    <>
+      <SEO title="Privacy Policy" description="Tecovision privacy policy — how we collect, use, and protect your personal data." path="/privacy" />
     <div className="pb-24">
       {/* Header */}
       <section className="px-5 md:px-16 max-w-container mx-auto pt-14 pb-12 border-b border-zinc-muted/20">
@@ -70,5 +73,6 @@ export default function PrivacyPolicy() {
         </div>
       </section>
     </div>
+    </>
   );
 }

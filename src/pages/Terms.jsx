@@ -1,4 +1,5 @@
 import Reveal from '../components/Reveal';
+import SEO from '../components/SEO';
 
 const sections = [
   {
@@ -41,6 +42,8 @@ const sections = [
 
 export default function Terms() {
   return (
+    <>
+      <SEO title="Terms and Conditions" description="Tecovision terms and conditions — governing your use of our website and services." path="/terms" />
     <div className="pb-24">
       {/* Header */}
       <section className="px-5 md:px-16 max-w-container mx-auto pt-14 pb-12 border-b border-zinc-muted/20">
@@ -78,5 +81,6 @@ export default function Terms() {
         </div>
       </section>
     </div>
+    </>
   );
 }
