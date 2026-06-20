@@ -161,11 +161,6 @@ export default function About() {
               delay={i * 60}
               className="bg-white/60 backdrop-blur-md border border-white/50 rounded-2xl p-8 hover:bg-white/75 transition-all duration-200 group cursor-pointer shadow-sm"
             >
-              <div className="w-12 h-12 bg-white/70 backdrop-blur-sm border border-white/60 rounded-xl mb-6 flex items-center justify-center shadow-sm">
-                <span className="font-grotesk text-headline-lg font-bold text-deep-black">
-                  {name.split(' ').map((n) => n[0]).join('').slice(0, 2)}
-                </span>
-              </div>
               <h3 className="font-grotesk text-headline-lg text-deep-black mb-1">{name}</h3>
               <p className="font-inter text-body-sm text-on-surface-variant">{role}</p>
             </Reveal>
