@@ -35,7 +35,7 @@ function LinkedInIcon() {
 }
 
 const socialLinks = [
-  { label: 'Instagram', href: 'https://instagram.com', Icon: InstagramIcon },
+  { label: 'Instagram', href: 'https://www.instagram.com/tecovision/', Icon: InstagramIcon },
   { label: 'X (Twitter)', href: 'https://x.com', Icon: XIcon },
   { label: 'WhatsApp', href: 'https://wa.me/918951085909', Icon: WhatsAppIcon },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/company/tecovision/services/?viewAsMember=true', Icon: LinkedInIcon },

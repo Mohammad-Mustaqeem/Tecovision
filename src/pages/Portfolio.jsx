@@ -9,7 +9,7 @@ const projects = [
     title: 'Dental Clinic',
     category: 'Healthcare',
     desc: 'A modern, conversion-focused website for a dental clinic — featuring service listings, appointment booking flow, patient testimonials, and a clean professional aesthetic built to establish trust.',
-    image: U('photo-1588776814546-1ffbb172d936'),
+    image: U('photo-1629909613654-28e377c37b09'),
     tech: ['React', 'Tailwind CSS', 'Vite'],
     href: 'https://dental-clinic-demo-taupe.vercel.app/',
   },
