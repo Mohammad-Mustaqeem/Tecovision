@@ -37,7 +37,7 @@ export default function Navbar() {
           <img
             src="/Favicon.jpeg"
             alt="Tecovision"
-            className="h-10 w-10 object-contain flex-shrink-0"
+            className="h-14 w-14 object-contain flex-shrink-0"
           />
           <div className="overflow-hidden max-w-0 group-hover:max-w-[220px] transition-all duration-500 ease-out">
             <span className="font-grotesk font-bold text-deep-black tracking-tight text-xl whitespace-nowrap pl-3">
