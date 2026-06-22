@@ -48,12 +48,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
           {/* Brand column */}
           <div className="col-span-1 md:col-span-5">
-            <Link
-              to="/"
-              className="font-grotesk text-headline-lg font-bold text-pure-white mb-4 flex items-center gap-2"
-            >
-              <span className="w-2 h-2 bg-signal-red block flex-shrink-0" />
-              TECOVISION
+            <Link to="/" className="flex items-center gap-3 mb-4">
+              <img src="/favicon.png" alt="Tecovision" className="h-9 w-9 object-contain flex-shrink-0" />
+              <span className="font-grotesk text-headline-lg font-bold text-pure-white">TECOVISION</span>
             </Link>
             <p className="font-inter text-body-sm text-zinc-muted opacity-80 mt-4 leading-relaxed">
               Tecovision. Engineered for Precision.

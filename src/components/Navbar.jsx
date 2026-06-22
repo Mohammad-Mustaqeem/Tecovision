@@ -32,13 +32,18 @@ export default function Navbar() {
       }`}
     >
       <div className="flex justify-between items-center h-20 px-5 md:px-16 max-w-container mx-auto">
-        {/* Logo */}
-        <Link
-          to="/"
-          className="font-grotesk text-headline-lg font-bold tracking-tighter flex items-center gap-2 text-deep-black"
-        >
-          <span className="w-2 h-2 bg-signal-red block flex-shrink-0" />
-          TECOVISION
+        {/* Logo — icon only, text slides in on hover (Accenture-style) */}
+        <Link to="/" className="group flex items-center">
+          <img
+            src="/favicon.png"
+            alt="Tecovision"
+            className="h-10 w-10 object-contain flex-shrink-0"
+          />
+          <div className="overflow-hidden max-w-0 group-hover:max-w-[220px] transition-all duration-500 ease-out">
+            <span className="font-grotesk font-bold text-deep-black tracking-tight text-xl whitespace-nowrap pl-3">
+              TECOVISION
+            </span>
+          </div>
         </Link>
 
         {/* Desktop Nav */}
