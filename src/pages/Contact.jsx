@@ -23,7 +23,7 @@ export default function Contact() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          access_key: '35e192e5-cdfb-43ef-9045-9218192db61d',
           subject: `New Project Enquiry — ${selected}`,
           from_name: form.name,
           name: form.name,
@@ -31,6 +31,7 @@ export default function Contact() {
           budget: form.budget || 'Not specified',
           project_type: selected,
           message: form.message,
+          botcheck: false,
         }),
       });
 
@@ -38,9 +39,11 @@ export default function Contact() {
       if (data.success) {
         setStatus('sent');
       } else {
+        console.error('Web3Forms error:', data);
         setStatus('error');
       }
-    } catch {
+    } catch (err) {
+      console.error('Form submit error:', err);
       setStatus('error');
     }
   }
