@@ -33,14 +33,14 @@ export default function Navbar() {
     >
       <div className="flex justify-between items-center h-20 px-5 md:px-16 max-w-container mx-auto">
         {/* Logo — icon only, text slides in on hover (Accenture-style) */}
-        <Link to="/" className="group flex items-center">
+        <Link to="/" className="group flex items-center -ml-3">
           <img
             src="/Favicon.jpeg"
             alt="Tecovision"
-            className="h-14 w-14 object-contain flex-shrink-0"
+            className="h-11 w-11 md:h-14 md:w-14 object-contain flex-shrink-0"
           />
           <div className="overflow-hidden max-w-0 group-hover:max-w-[220px] transition-all duration-500 ease-out">
-            <span className="font-grotesk font-bold text-deep-black tracking-tight text-xl whitespace-nowrap pl-3">
+            <span className="font-grotesk font-bold text-deep-black tracking-tight text-lg md:text-xl whitespace-nowrap pl-2">
               TECOVISION
             </span>
           </div>
