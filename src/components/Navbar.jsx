@@ -35,7 +35,7 @@ export default function Navbar() {
         {/* Logo — icon only, text slides in on hover (Accenture-style) */}
         <Link to="/" className="group flex items-center">
           <img
-            src="/favicon.png"
+            src="/Favicon.jpeg"
             alt="Tecovision"
             className="h-10 w-10 object-contain flex-shrink-0"
           />

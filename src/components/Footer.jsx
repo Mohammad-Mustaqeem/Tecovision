@@ -49,7 +49,7 @@ export default function Footer() {
           {/* Brand column */}
           <div className="col-span-1 md:col-span-5">
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <img src="/favicon.png" alt="Tecovision" className="h-9 w-9 object-contain flex-shrink-0" />
+              <img src="/Favicon.jpeg" alt="Tecovision" className="h-9 w-9 object-contain flex-shrink-0" />
               <span className="font-grotesk text-headline-lg font-bold text-pure-white">TECOVISION</span>
             </Link>
             <p className="font-inter text-body-sm text-zinc-muted opacity-80 mt-4 leading-relaxed">
