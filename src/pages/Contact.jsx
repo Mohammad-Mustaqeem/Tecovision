@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ArrowRight, Mail, Phone, MapPin } from 'lucide-react';
+import { ArrowRight, Mail, Phone, MapPin, Loader2 } from 'lucide-react';
 import Reveal from '../components/Reveal';
 import SEO from '../components/SEO';
 
@@ -7,11 +7,42 @@ const projectTypes = ['System Architecture', 'Web Development', 'Mobile App', 'A
 
 export default function Contact() {
   const [selected, setSelected] = useState('System Architecture');
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState('idle'); // idle | sending | sent | error
+  const [form, setForm] = useState({ name: '', email: '', budget: '', message: '' });
 
-  function handleSubmit(e) {
+  function handleChange(e) {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  }
+
+  async function handleSubmit(e) {
     e.preventDefault();
-    setSent(true);
+    setStatus('sending');
+
+    try {
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: import.meta.env.VITE_WEB3FORMS_KEY,
+          subject: `New Project Enquiry — ${selected}`,
+          from_name: form.name,
+          name: form.name,
+          email: form.email,
+          budget: form.budget || 'Not specified',
+          project_type: selected,
+          message: form.message,
+        }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        setStatus('sent');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   }
 
   return (
@@ -42,14 +73,14 @@ export default function Contact() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
           {/* Form */}
           <Reveal className="md:col-span-7">
-            {sent ? (
+            {status === 'sent' ? (
               <div className="bg-white/60 backdrop-blur-md border border-white/50 rounded-2xl p-12 text-center shadow-sm">
                 <div className="w-12 h-12 bg-deep-black flex items-center justify-center mx-auto mb-6 rounded-xl">
                   <span className="text-pure-white text-xl font-bold">✓</span>
                 </div>
-                <h2 className="font-grotesk text-headline-xl text-deep-black mb-3">Transmission Received</h2>
+                <h2 className="font-grotesk text-headline-xl text-deep-black mb-3">Message Received</h2>
                 <p className="font-inter text-body-md text-on-surface-variant">
-                  We'll analyse your requirements and respond within 24 hours with initial thoughts and next steps.
+                  We'll review your requirements and respond within 24 hours with initial thoughts and next steps.
                 </p>
               </div>
             ) : (
@@ -67,6 +98,8 @@ export default function Contact() {
                       type="text"
                       autoComplete="name"
                       placeholder="Jane Doe"
+                      value={form.name}
+                      onChange={handleChange}
                       className="w-full border border-zinc-muted/40 bg-white/70 backdrop-blur-sm px-4 py-3 font-inter text-body-md text-on-surface outline-none focus:border-deep-black transition-colors placeholder:text-zinc-muted rounded-xl"
                     />
                   </div>
@@ -81,6 +114,8 @@ export default function Contact() {
                       type="email"
                       autoComplete="email"
                       placeholder="jane@company.com"
+                      value={form.email}
+                      onChange={handleChange}
                       className="w-full border border-zinc-muted/40 bg-white/70 backdrop-blur-sm px-4 py-3 font-inter text-body-md text-on-surface outline-none focus:border-deep-black transition-colors placeholder:text-zinc-muted rounded-xl"
                     />
                   </div>
@@ -119,6 +154,8 @@ export default function Contact() {
                     name="budget"
                     type="text"
                     placeholder="e.g. ₹50,000 · $5,000 · To be scoped · Flexible"
+                    value={form.budget}
+                    onChange={handleChange}
                     className="w-full border border-zinc-muted/40 bg-white/70 backdrop-blur-sm px-4 py-3 font-inter text-body-md text-on-surface outline-none focus:border-deep-black transition-colors placeholder:text-zinc-muted rounded-xl"
                   />
                 </div>
@@ -134,15 +171,28 @@ export default function Contact() {
                     required
                     rows={6}
                     placeholder="Describe your project, requirements, timeline, and any relevant details..."
+                    value={form.message}
+                    onChange={handleChange}
                     className="w-full border border-zinc-muted/40 bg-white/70 backdrop-blur-sm px-4 py-3 font-inter text-body-md text-on-surface outline-none focus:border-deep-black transition-colors placeholder:text-zinc-muted resize-none rounded-xl"
                   />
                 </div>
 
+                {status === 'error' && (
+                  <p className="font-inter text-body-sm text-signal-red">
+                    Something went wrong. Please try again or email us directly at tecovision.com@gmail.com
+                  </p>
+                )}
+
                 <button
                   type="submit"
-                  className="btn-primary w-full md:w-auto justify-center"
+                  disabled={status === 'sending'}
+                  className="btn-primary w-full md:w-auto justify-center disabled:opacity-60 disabled:cursor-not-allowed"
                 >
-                  Transmit Protocol <ArrowRight size={16} />
+                  {status === 'sending' ? (
+                    <><Loader2 size={16} className="animate-spin" /> Sending...</>
+                  ) : (
+                    <>Send Message <ArrowRight size={16} /></>
+                  )}
                 </button>
               </form>
             )}
@@ -220,7 +270,6 @@ export default function Contact() {
       {/* Map */}
       <section className="px-5 md:px-16 max-w-container mx-auto pb-12">
         <Reveal className="bg-white/60 backdrop-blur-md border border-white/50 rounded-2xl overflow-hidden shadow-sm">
-          {/* Replace the src value below with your Google Maps embed URL */}
           <iframe
             title="Tecovision — Head Office, Vijayapura"
             src="https://maps.google.com/maps?q=16.822866,75.724362&t=&z=18&ie=UTF8&iwloc=&output=embed"
