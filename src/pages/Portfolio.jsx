@@ -12,7 +12,7 @@ const projects = [
     desc: 'A modern, conversion-focused website for a dental clinic — featuring service listings, appointment booking flow, patient testimonials, and a clean professional aesthetic built to establish trust.',
     image: U('photo-1629909613654-28e377c37b09'),
     tech: ['React', 'Tailwind CSS', 'Vite'],
-    href: 'https://dental-clinic-demo-taupe.vercel.app/',
+    href: 'https://dental-clinic-demo-umber.vercel.app/',
   },
   {
     id: 2,
@@ -21,7 +21,7 @@ const projects = [
     desc: 'A premium property listing platform designed for real estate agencies — with property search, filterable listings, detailed property pages, and a sleek UI built to drive enquiries.',
     image: U('photo-1560518883-ce09059eeffa'),
     tech: ['React', 'Tailwind CSS', 'Vite'],
-    href: 'https://realestatewebsite-sage.vercel.app/',
+    href: 'https://real-estate-demo-murex.vercel.app/',
   },
   {
     id: 3,
